@@ -69,4 +69,17 @@ class Dealer:
             self.points -= 75
         
 
+#"************************ CAN DEAL **************************"
 
+
+    def can_deal(self):
+
+        """ This function will verify if the user can play or not 
+        if the user get to 0 will not be able to play anymore"""
+
+        if self.points > 0:
+            return True
+        else:
+            print("Dude you lost everything")
+            return False
+     
