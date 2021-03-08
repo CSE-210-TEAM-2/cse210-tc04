@@ -1,10 +1,8 @@
 import random
 
-
-
-
 class Dealer:
-def __init__(self):
+
+    def __init__(self):
 
         """"Class Constructor: will inizialite a dictionary and the num_throws to count
          the amount of times he is going to throw it"""
