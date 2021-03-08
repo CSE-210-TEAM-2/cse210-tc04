@@ -35,4 +35,49 @@ class Director:
 
         self.dealer.deal_cards()
         
+             
         
+    # ********************** do outputs
+    def do_outputs(self):
+        """Outputs the important game information for each round of play. In 
+        this case, that means the dealer will get a card and do the score 
+
+        """
+        print(f"\nThe Card is : {self.dealer.cards[0]}")
+        self.dealer.guess()        
+
+    
+        # ********************** Do updates
+
+        
+    def do_updates(self):
+        """Updates the important game information for each round of play. In 
+        this case, that means updating the score.
+        """
+
+        print(f"Next Card was : {self.dealer.cards[1]}") 
+
+        self.score = self.dealer.get_points()
+
+        print(f"Your score is {self.score}")
+
+                
+        if self.dealer.can_deal():
+            choice = input("Keep playing? [y/n] ")
+            if choice == "n":
+                print("Thanks for playing have a nice day")
+            self.keep_playing = (choice == "y")
+        else:
+            
+            self.keep_playing = False
+            print("You Lost but Thanks for Playing!!")
+
+    
+
+
+       
+    
+
+
+
+
